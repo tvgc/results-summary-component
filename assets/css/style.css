@@ -1,0 +1,319 @@
+/*-----------------------------------*\
+  #FONTS
+\*-----------------------------------*/
+@font-face {
+    font-family: 'Hanken';
+    font-weight: 500 700 800;
+    src: url('../fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+/*-----------------------------------*\
+  #VARIABLES
+\*-----------------------------------*/
+:root {
+    /*Colors*/
+    --first-color: #CAC9FF;
+    --second-color: #303B59;
+
+    --main-gradient-color: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+    --second-gradient-color: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
+
+    /* typography */
+
+    --font-family: 'Hanken';
+
+    --normal-fs: 1.6rem;
+    --big-fs: 1.8rem;
+    --bigger-fs: 2.4rem;
+    --biggest-fs: 5.6rem;
+    
+}
+
+/*736px*/
+@media (min-width: 736px){
+    :root {
+        --normal-fs: 1.8rem;
+        --big-fs: 2.4rem;
+        --bigger-fs: 3.2rem;
+        --biggest-fs: 7.2rem;
+    }
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a,
+img,
+span,
+input,
+button,
+ion-icon { display: block; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+ input,
+ button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input { width: 100%; }
+
+button { cursor: pointer; }
+
+img {
+    max-width: 100%; 
+    height: auto;
+}
+
+html {
+    font-family: var(--body-font-family);
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--normal-fs);
+    font-family: 'Hanken';
+    /* background-color: #d4f2fd; */
+}
+
+
+/*-----------------------------------*\
+  #COMMON CODE
+\*-----------------------------------*/
+.container {
+    margin: 0 auto;
+    max-width: 73.6rem;
+    background-color: #FFFFFF;
+}
+
+/*-----------------------------------*\
+  #TOP-LEFT
+\*-----------------------------------*/
+.top-left {
+    padding: 2.4rem 5.7rem 4rem;
+    background-image: var(--main-gradient-color);
+    text-align: center;
+    border-radius: 0 0 3.2rem 3.2rem;
+}
+
+.your-result {
+    font-size: var(--big-fs);
+    color: var(--first-color);
+    margin-bottom: 2.4rem;
+}
+
+.box-result {
+    width: 16rem;
+    height: 16rem;
+    margin: 0 auto 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--second-gradient-color);
+}
+
+.number-result {
+    font-size: var(--biggest-fs);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 7.2rem;
+}
+
+.number-parameter {
+    font-size: var(--normal-fs);
+    font-weight: 700;
+    color: var(--first-color);
+}
+
+.great {
+    font-size: var(--bigger-fs);
+    font-weight: 700;
+    line-height: 3.127rem;
+    color: #FFFFFF;
+    margin-bottom: 0.8rem;
+}
+
+.desc {
+    font-size: var(--normal-fs);
+    font-weight: 500;
+    line-height: 2.085rem;
+    color: var(--first-color);
+}
+
+
+/*-----------------------------------*\
+  #BOTTOM-RIGHT
+\*-----------------------------------*/
+.bottom-right {
+    padding: 2.4rem 3rem 3rem;
+    background-color: #FFFFFF;
+}
+
+.summary {
+    font-size: var(--big-fs);
+    font-weight: 700;
+    color: var(--second-color);
+    line-height: 2.345rem;
+    margin: 0 0 2.4rem 0.2rem;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    flex-basis: 5.6rem;
+    font-size: var(--normal-fs);
+    padding: 1.75rem 1.6rem;
+    border-radius: 1.2rem;
+}
+
+.item img {
+    margin-right: 1.2rem;
+}
+
+.item .label {
+    flex: 1;
+    font-weight: 500;
+}
+
+.item:nth-child(1) {    
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FF5555;
+}
+
+.item:nth-child(1) .label {
+    color: #FF5555;
+}
+
+.item:nth-child(2) {    
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FFB21E;
+}
+
+.item:nth-child(2) .label {
+    color: #FFB21E;
+}
+
+.item:nth-child(3) {    
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #00BB8F;
+}
+
+.item:nth-child(3) .label {
+    color: #00BB8F;
+}
+
+.item:nth-child(4) {    
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #1125D6;
+}
+
+
+.item:nth-child(4) .label {
+    color: #1125D6;
+}
+
+.numbers {
+    color: var(--second-color);
+    font-weight: 700;
+}
+
+.numbers span {
+    display: inline;
+}
+
+.numbers span:last-child {
+    opacity: 0.5;
+}
+
+button {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: var(--second-color);
+    width: 100%;
+    padding-block: 1.7rem;
+    border-radius: 12.8rem;
+}
+
+@media (min-width: 736px) {
+
+    main {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    body {
+        background-color: #d4f2fd;
+    }
+
+    .flex {
+        display: flex;        
+    }
+
+    .container {
+        height: 51.2rem;
+        border-radius: 3.2rem 3.2rem 3.2rem 3.2rem;
+        overflow: hidden;
+    }
+
+    .top-left {
+        padding: 3.8rem 5.4rem 5.5rem;
+        flex-basis: 36.8rem;
+        border-radius: 32px;
+        
+    }
+
+    .your-result {
+        margin-bottom: 3.5rem;
+    }
+
+    .box-result {
+        width: 20rem;
+        height: 20rem;
+        margin-bottom: 2.8rem;
+    }
+
+    .great {
+        margin-bottom: 1.4rem;
+        line-height: 4.17rem;
+    }
+
+    .desc {
+        width: 26rem;
+        line-height: 2.345rem;
+    }
+
+    .bottom-right {
+        width: 36.8rem;
+        padding: 3.8rem 4rem 4.6rem;
+    }
+
+    .summary {
+        margin-bottom: 2.8rem;
+    }
+
+    .items {
+        margin-bottom: 4.1rem;
+    }
+}
